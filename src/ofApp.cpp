@@ -14,8 +14,8 @@ void ofApp::setup(){
 	_midiIdx = _xml.getValue("settings:midiid", 0);
 
 	_sender.setup(_oscIp, _oscPort);
-	_midiIn.listPorts();
 
+	_midiIn.listPorts();
 	_midiIn.openPort(_midiIdx);
 	_midiIn.ignoreTypes(false, false, false);
 	_midiIn.addListener(this);
@@ -69,22 +69,11 @@ void ofApp::newMidiMessage(ofxMidiMessage& msg) {
 				}
 			}
 
-			//printf("%i:%i:%i:%i | %s\n", times[3], times[2], times[1], times[0], szType);
-
 			hours = times[3];
 			minutes = times[2];
 			seconds = times[1];
 			frames = times[0];
 
-//			secondFraction = (float)timcodeEventArgs.frames / (float)timcodeEventArgs.numFrames;
-
-//			timcodeEventArgs.timeAsMillis = timeToMillis(timcodeEventArgs);
-
-//			ofNotifyEvent(MTCEvent, timcodeEventArgs, this);
-
-//			sprintf( reportString, "%i:%i:%i:%i | %s\n", times[3], times[2], times[1], times[0], szType );		
-
-			ofxOscBundle bundle;
 			ofxOscMessage mes;
 			mes.setAddress("/mtc");
 			mes.addIntArg(hours);
