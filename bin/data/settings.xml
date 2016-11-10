@@ -1,0 +1,5 @@
+<settings>
+	<midiid>0</midiid>
+	<oscip>127.0.0.1</oscip>
+	<oscport>10001</oscport>
+</settings>

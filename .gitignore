@@ -1,0 +1,15 @@
+/obj
+/bin/assimp.dll
+/bin/fmodex.dll
+/bin/fmodex64.dll
+/bin/fmodexL.dll
+/bin/fmodexL64.dll
+/bin/FreeImage.dll
+/bin/freetype.dll
+/bin/glut32.dll
+/bin/libeay32.dll
+/bin/mtc_convert.exe
+/bin/mtc_convert.exp
+/bin/mtc_convert.lib
+/bin/ssleay32.dll
+/bin/Zlib.dll
